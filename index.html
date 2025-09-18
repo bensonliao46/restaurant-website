@@ -3,37 +3,63 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Test Page</title>
+  <title>Restaurant Website</title>
   <style>
     body {
+      margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #faf3e0;
-      text-align: center;
-      padding: 50px;
     }
-    h1 {
-      color: #b22222;
+    header {
+      background-color: #b22222;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
     }
-    p {
-      font-size: 18px;
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
     }
-    .button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin-top: 20px;
-      background-color: #226cb2;
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    nav ul li {
+      display: inline;
+    }
+    nav ul li a {
       color: white;
       text-decoration: none;
-      border-radius: 5px;
+      font-size: 18px;
     }
-    .button:hover {
-      background-color: #8b1a1a;
+    nav ul li a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>🍽️ Welcome to My Restaurant</h1>
-  <p>If you can see this page, GitHub Pages is working! test</p>
-  <a href="#" class="button">Explore Menu</a>
+  <header>
+    <!-- Logo (replace text with an image if you have one) -->
+    <div class="logo">🍴 My Restaurant</div>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="padding:20px;">
+    <h1>Welcome to My Restaurant</h1>
+    <p>This is a test homepage. Navigation links are ready!</p>
+  </main>
 </body>
 </html>
