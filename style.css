@@ -107,3 +107,42 @@ nav ul li a:hover {
   color: #333;
 }
 
+
+.gallery {
+  text-align: center;
+  padding: 40px 20px;
+  background: #f9f9f9;
+}
+
+.slider {
+  width: 90%;
+  max-width: 800px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.slides {
+  display: flex;
+  width: calc(100% * 6); /* 6 images */
+  animation: slide 18s infinite;
+}
+
+.slides img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+@keyframes slide {
+  0% { transform: translateX(0); }
+  16% { transform: translateX(0); }
+  20% { transform: translateX(-100%); }
+  36% { transform: translateX(-100%); }
+  40% { transform: translateX(-200%); }
+  56% { transform: translateX(-200%); }
+  60% { transform: translateX(-300%); }
+  76% { transform: translateX(-300%); }
+  80% { transform: translateX(-400%); }
+  96% { transform: translateX(-400%); }
+  100% { transform: translateX(-500%); }
+}
