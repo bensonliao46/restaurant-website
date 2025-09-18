@@ -34,6 +34,18 @@ nav ul li a:hover {
 }
 
 .logo img {
-  height: 100px;
+  height: 80px;
   width: auto;
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    height: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo img {
+    height: 40px;
+  }
 }
