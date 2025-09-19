@@ -135,9 +135,9 @@ nav ul li a:hover {
 
 .slides img {
   height: 400px;
-  width: auto;
-  margin: 0 auto;
-  object-fit: contain;
+  width: 16.6666%;
+  flex-shrink: 0;
+  object-fit: cover; 
 }
 
 @keyframes slide {
@@ -151,20 +151,20 @@ nav ul li a:hover {
 }
 
 @media (max-width: 768px) {
-  .gallery {
-    padding: 20px 10px;
-  }
   .slides img {
-    height: auto;
+    height: 250px;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
   }
 }
 
 @media (max-width: 480px) {
-  .gallery h2 {
-    font-size: 20px;
-  }
   .slides img {
-    height: auto;
+    height: 180px;
+    width: 100%;
+    flex-shrink: 0;
+    object-fit: cover;
   }
 }
 
