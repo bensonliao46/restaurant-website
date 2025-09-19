@@ -135,10 +135,9 @@ nav ul li a:hover {
 
 .slides img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  flex-shrink: 0;
+  height: 400px;
   object-fit: cover;
+  flex-shrink: 0;
 }
 
 /* Animation for auto-sliding */
