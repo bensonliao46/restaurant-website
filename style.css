@@ -140,19 +140,14 @@ nav ul li a:hover {
   object-fit: contain;
 }
 
-/* Animation for auto-sliding */
 @keyframes slide {
-  0% { transform: translateX(0); }
-  16% { transform: translateX(0); }
-  20% { transform: translateX(-100%); }
-  36% { transform: translateX(-100%); }
-  40% { transform: translateX(-200%); }
-  56% { transform: translateX(-200%); }
-  60% { transform: translateX(-300%); }
-  76% { transform: translateX(-300%); }
-  80% { transform: translateX(-400%); }
-  96% { transform: translateX(-400%); }
-  100% { transform: translateX(-500%); }
+  0% { transform: translateX(0%); }
+  16.666% { transform: translateX(0%); }       /* first image visible */
+  33.333% { transform: translateX(-16.666%); } /* second image */
+  50% { transform: translateX(-33.333%); }      /* third image */
+  66.666% { transform: translateX(-50%); }      /* fourth image */
+  83.333% { transform: translateX(-66.666%); }  /* fifth image */
+  100% { transform: translateX(-83.333%); }     /* sixth image */
 }
 
 @media (max-width: 768px) {
