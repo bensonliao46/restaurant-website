@@ -199,3 +199,33 @@ nav ul li a:hover {
 main {
   color: white;
 }
+
+footer {
+  background-color: #b22222; /* red footer */
+  color: white;
+  text-align: center;
+  padding: 20px 10px;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+footer .social-media {
+  margin-bottom: 10px;
+}
+
+footer .business-hours p {
+  margin: 2px 0;
+}
