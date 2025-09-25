@@ -175,7 +175,7 @@ nav ul li a:hover {
 @media (max-width: 768px) {
   .slides img {
     height: 250px;
-    width: 100%;
+    width: 16.6666%;
     flex-shrink: 0;
     object-fit: cover;
   }
@@ -184,7 +184,7 @@ nav ul li a:hover {
 @media (max-width: 480px) {
   .slides img {
     height: 180px;
-    width: 100%;
+    width: 16.6666%;
     flex-shrink: 0;
     object-fit: cover;
   }
