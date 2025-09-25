@@ -51,7 +51,6 @@ nav ul li a:hover {
   }
 }
 
-/* Hero Banner */
 .hero {
   position: relative;
   text-align: center;
@@ -60,8 +59,8 @@ nav ul li a:hover {
 
 .hero img {
   width: 100%;
-  height: 400px;       /* default desktop height */
-  object-fit: cover;   /* keeps image nicely cropped */
+  height: 400px;
+  object-fit: cover;
 }
 
 .hero-text {
@@ -69,7 +68,7 @@ nav ul li a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 36px;             /* default desktop font */
+  font-size: 36px;
   font-weight: bold;
   background-color: rgba(0, 0, 0, 0.5);
   padding: 20px;
@@ -86,7 +85,6 @@ nav ul li a:hover {
   }
 }
 
-/* Mobile phones */
 @media (max-width: 480px) {
   .hero img {
     height: 180px;
@@ -151,7 +149,7 @@ nav ul li a:hover {
 
 .slides {
   display: flex;
-  width: 600%; /* 6 images */
+  width: 600%;
   animation: slide 18s infinite;
 }
 
@@ -164,12 +162,12 @@ nav ul li a:hover {
 
 @keyframes slide {
   0% { transform: translateX(0%); }
-  16.666% { transform: translateX(0%); }       /* first image visible */
-  33.333% { transform: translateX(-16.666%); } /* second image */
-  50% { transform: translateX(-33.333%); }      /* third image */
-  66.666% { transform: translateX(-50%); }      /* fourth image */
-  83.333% { transform: translateX(-66.666%); }  /* fifth image */
-  100% { transform: translateX(-83.333%); }     /* sixth image */
+  16.666% { transform: translateX(0%); }
+  33.333% { transform: translateX(-16.666%); } 
+  50% { transform: translateX(-33.333%); }
+  66.666% { transform: translateX(-50%); }
+  83.333% { transform: translateX(-66.666%); }
+  100% { transform: translateX(-83.333%); }
 }
 
 @media (max-width: 768px) {
@@ -223,7 +221,7 @@ main {
 }
 
 footer {
-  background-color: #b22222; /* red footer */
+  background-color: #b22222;
   color: white;
   text-align: center;
   padding: 20px 10px;
