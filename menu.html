@@ -17,6 +17,9 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    <div class="cart-icon" onclick="toggleCart()">
+      <span class="cart-count" id="cartCount">0</span>
+    </div>
   </header>
 
   <main style="padding:20px;">
@@ -27,26 +30,49 @@
         <h2>Double-Double Burger</h2>
         <p>Two beef patties, two slices of cheese, fresh lettuce & tomato</p>
         <span>$5.99</span>
+        <button class="add-to-cart-btn" onclick="addToCart('Double-Double Burger', 5.99)">Add to Cart</button>
       </div>
 
       <div class="menu-card">
         <h2>Cheeseburger</h2>
         <p>Classic single patty burger with melted cheese</p>
         <span>$3.99</span>
+        <button class="add-to-cart-btn" onclick="addToCart('Double-Double Burger', 5.99)">Add to Cart</button>
       </div>
 
       <div class="menu-card">
         <h2>French Fries</h2>
         <p>Golden, crispy fries made fresh</p>
         <span>$2.49</span>
+        <button class="add-to-cart-btn" onclick="addToCart('Double-Double Burger', 5.99)">Add to Cart</button>
       </div>
 
       <div class="menu-card">
         <h2>Shakes</h2>
         <p>Chocolate, Strawberry, or Vanilla made with real ice cream</p>
         <span>$2.99</span>
+        <button class="add-to-cart-btn" onclick="addToCart('Double-Double Burger', 5.99)">Add to Cart</button>
       </div>
     </div>
   </main>
+  <div class="cart-modal" id="cartModal">
+    <div class="cart-content">
+      <div class="cart-header">
+        <h2>Shopping Cart</h2>
+        <button class="close-cart" onclick="toggleCart()">&times;</button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="empty-cart">Your cart is empty</div>
+      </div>
+      <div class="cart-total" id="cartTotal" style="display: none;">
+        Total: $0.00
+      </div>
+      <button class="checkout-btn" id="checkoutBtn" style="display: none;" onclick="checkout()">Proceed to Checkout</button>
+    </div>
+  </div>
+   <div class="added-notification" id="addedNotification">
+    Item added to cart!
+  </div>
+  <script src="cart.js"></script>
 </body>
 </html>
