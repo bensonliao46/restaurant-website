@@ -250,12 +250,17 @@ footer .business-hours p {
   margin: 2px 0;
 }
 
-/* Shopping Cart Icon */
 .cart-icon {
   position: relative;
   cursor: pointer;
   font-size: 24px;
   color: #b22222;
+  padding: 10px;
+  user-select: none;
+}
+
+.cart-icon:hover {
+  opacity: 0.7;
 }
 
 .cart-count {
