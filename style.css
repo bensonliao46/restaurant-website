@@ -257,6 +257,7 @@ footer .business-hours p {
   color: #b22222;
   padding: 10px;
   user-select: none;
+  z-index: 100;
 }
 
 .cart-icon:hover {

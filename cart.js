@@ -140,3 +140,18 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+// Add click event listener to cart icon
+document.addEventListener('DOMContentLoaded', function() {
+  const cartIcon = document.getElementById('cartIconBtn');
+  if (cartIcon) {
+    cartIcon.addEventListener('click', toggleCart);
+  }
+  
+  // Close modal when clicking outside the cart content
+  document.getElementById('cartModal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      toggleCart();
+    }
+  });
+});
