@@ -280,7 +280,6 @@ footer .business-hours p {
   font-weight: bold;
 }
 
-/* Add to Cart Button */
 .add-to-cart-btn {
   background-color: #b22222;
   color: white;
@@ -297,7 +296,6 @@ footer .business-hours p {
   background-color: #8b1a1a;
 }
 
-/* Cart Modal Overlay */
 .cart-modal {
   display: none;
   position: fixed;
@@ -315,7 +313,6 @@ footer .business-hours p {
   align-items: center;
 }
 
-/* Cart Content Container */
 .cart-content {
   background: white;
   padding: 30px;
@@ -327,7 +324,6 @@ footer .business-hours p {
   position: relative;
 }
 
-/* Cart Header */
 .cart-header {
   display: flex;
   justify-content: space-between;
@@ -350,12 +346,10 @@ footer .business-hours p {
   border: none;
 }
 
-/* Cart Items Container */
 .cart-items {
   margin-bottom: 20px;
 }
 
-/* Individual Cart Item */
 .cart-item {
   display: flex;
   justify-content: space-between;
@@ -378,7 +372,6 @@ footer .business-hours p {
   color: #666;
 }
 
-/* Quantity Controls */
 .cart-item-controls {
   display: flex;
   align-items: center;
@@ -420,7 +413,6 @@ footer .business-hours p {
   background-color: #b71c1c;
 }
 
-/* Cart Total */
 .cart-total {
   text-align: right;
   padding: 20px;
@@ -430,14 +422,12 @@ footer .business-hours p {
   color: #333;
 }
 
-/* Empty Cart Message */
 .empty-cart {
   text-align: center;
   padding: 40px;
   color: #666;
 }
 
-/* Checkout Button */
 .checkout-btn {
   width: 100%;
   background-color: #b22222;
@@ -454,7 +444,6 @@ footer .business-hours p {
   background-color: #8b1a1a;
 }
 
-/* Added to Cart Notification */
 .added-notification {
   position: fixed;
   top: 20px;
@@ -473,7 +462,6 @@ footer .business-hours p {
   opacity: 1;
 }
 
-/* Clear Cart Button */
 .clear-cart-btn {
   background-color: #d32f2f;
   color: white;

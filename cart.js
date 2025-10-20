@@ -1,40 +1,23 @@
-// Shopping Cart Functionality
-// Cart array to store items in memory
 let cart = [];
 
-/**
- * Add item to cart
- * @param {string} name - Item name
- * @param {number} price - Item price
- */
 function addToCart(name, price) {
   const existingItem = cart.find(item => item.name === name);
   
   if (existingItem) {
-    // If item already exists, increase quantity
     existingItem.quantity++;
   } else {
-    // Add new item to cart
     cart.push({ name, price, quantity: 1 });
   }
   
   updateCart();
 }
 
-/**
- * Remove item completely from cart
- * @param {string} name - Item name to remove
- */
 function removeFromCart(name) {
   cart = cart.filter(item => item.name !== name);
   updateCart();
 }
 
-/**
- * Update quantity of an item in cart
- * @param {string} name - Item name
- * @param {number} change - Amount to change (+1 or -1)
- */
+
 function updateQuantity(name, change) {
   const item = cart.find(item => item.name === name);
   if (item) {
@@ -47,9 +30,6 @@ function updateQuantity(name, change) {
   }
 }
 
-/**
- * Update cart display - refreshes cart count, items, and total
- */
 function updateCart() {
   const cartCount = document.getElementById('cartCount');
   const cartItems = document.getElementById('cartItems');
@@ -57,18 +37,15 @@ function updateCart() {
   const checkoutBtn = document.getElementById('checkoutBtn');
   const clearCartBtn = document.getElementById('clearCartBtn');
   
-  // Update cart count badge
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
   cartCount.textContent = totalItems;
   
-  // Display empty cart message if no items
   if (cart.length === 0) {
     cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
     cartTotal.style.display = 'none';
     checkoutBtn.style.display = 'none';
     clearCartBtn.style.display = 'none';
   } else {
-    // Build cart items HTML
     let itemsHTML = '';
     let total = 0;
     
@@ -100,32 +77,22 @@ function updateCart() {
   }
 }
 
-/**
- * Toggle cart modal visibility
- */
 function toggleCart() {
   const cartModal = document.getElementById('cartModal');
   cartModal.classList.toggle('active');
 }
 
-/**
- * Process checkout
- */
 function checkout() {
   if (cart.length === 0) return;
   
   const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
   alert(`Thank you for your order!\n\nTotal: $${total.toFixed(2)}\n\nYour order will be ready soon!`);
   
-  // Clear cart after checkout
   cart = [];
   updateCart();
   toggleCart();
 }
 
-/**
- * Clear all items from cart
- */
 function clearCart() {
   if (cart.length === 0) return;
   
@@ -135,9 +102,7 @@ function clearCart() {
   }
 }
 
-// Initialize event listeners when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  // Close modal when clicking outside the cart content
   document.getElementById('cartModal').addEventListener('click', function(e) {
     if (e.target === this) {
       toggleCart();
