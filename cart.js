@@ -19,7 +19,6 @@ function addToCart(name, price) {
   }
   
   updateCart();
-  showNotification();
 }
 
 /**
@@ -67,7 +66,7 @@ function updateCart() {
     cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
     cartTotal.style.display = 'none';
     checkoutBtn.style.display = 'none';
-    clearCartBtn.style.display = 'none';  // ADD THIS LINE
+    clearCartBtn.style.display = 'none';
   } else {
     // Build cart items HTML
     let itemsHTML = '';
@@ -97,7 +96,7 @@ function updateCart() {
     cartTotal.innerHTML = `Total: $${total.toFixed(2)}`;
     cartTotal.style.display = 'block';
     checkoutBtn.style.display = 'block';
-    clearCartBtn.style.display = 'inline-block';  // ADD THIS LINE
+    clearCartBtn.style.display = 'inline-block';
   }
 }
 
@@ -107,17 +106,6 @@ function updateCart() {
 function toggleCart() {
   const cartModal = document.getElementById('cartModal');
   cartModal.classList.toggle('active');
-}
-
-/**
- * Show "item added to cart" notification
- */
-function showNotification() {
-  const notification = document.getElementById('addedNotification');
-  notification.classList.add('show');
-  setTimeout(() => {
-    notification.classList.remove('show');
-  }, 2000);
 }
 
 /**
@@ -135,35 +123,20 @@ function checkout() {
   toggleCart();
 }
 
-// Close modal when clicking outside the cart content
-document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('cartModal').addEventListener('click', function(e) {
-    if (e.target === this) {
-      toggleCart();
-    }
-  });
-});
-
 /**
  * Clear all items from cart
  */
 function clearCart() {
   if (cart.length === 0) return;
   
-  // Ask for confirmation
   if (confirm('Are you sure you want to remove all items from your cart?')) {
     cart = [];
     updateCart();
   }
 }
 
-// Add click event listener to cart icon
+// Initialize event listeners when page loads
 document.addEventListener('DOMContentLoaded', function() {
-  const cartIcon = document.getElementById('cartIconBtn');
-  if (cartIcon) {
-    cartIcon.addEventListener('click', toggleCart);
-  }
-  
   // Close modal when clicking outside the cart content
   document.getElementById('cartModal').addEventListener('click', function(e) {
     if (e.target === this) {
@@ -171,12 +144,3 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
-
-function clearCart() {
-  if (cart.length === 0) return;
-  
-  if (confirm('Are you sure you want to remove all items from your cart?')) {
-    cart = [];
-    updateCart();
-  }
-}
