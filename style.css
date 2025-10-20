@@ -472,3 +472,25 @@ footer .business-hours p {
 .added-notification.show {
   opacity: 1;
 }
+
+/* Clear Cart Button */
+.clear-cart-btn {
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.clear-cart-btn:hover {
+  background-color: #b71c1c;
+}
+
+.cart-header > div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}

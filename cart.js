@@ -56,6 +56,7 @@ function updateCart() {
   const cartItems = document.getElementById('cartItems');
   const cartTotal = document.getElementById('cartTotal');
   const checkoutBtn = document.getElementById('checkoutBtn');
+  const clearCartBtn = document.getElementById('clearCartBtn');  // ADD THIS LINE
   
   // Update cart count badge
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -66,6 +67,7 @@ function updateCart() {
     cartItems.innerHTML = '<div class="empty-cart">Your cart is empty</div>';
     cartTotal.style.display = 'none';
     checkoutBtn.style.display = 'none';
+    clearCartBtn.style.display = 'none';  // ADD THIS LINE
   } else {
     // Build cart items HTML
     let itemsHTML = '';
@@ -95,6 +97,7 @@ function updateCart() {
     cartTotal.innerHTML = `Total: $${total.toFixed(2)}`;
     cartTotal.style.display = 'block';
     checkoutBtn.style.display = 'block';
+    clearCartBtn.style.display = 'inline-block';  // ADD THIS LINE
   }
 }
 
@@ -140,6 +143,19 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+/**
+ * Clear all items from cart
+ */
+function clearCart() {
+  if (cart.length === 0) return;
+  
+  // Ask for confirmation
+  if (confirm('Are you sure you want to remove all items from your cart?')) {
+    cart = [];
+    updateCart();
+  }
+}
 
 // Add click event listener to cart icon
 document.addEventListener('DOMContentLoaded', function() {
