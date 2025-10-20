@@ -56,7 +56,7 @@ function updateCart() {
   const cartItems = document.getElementById('cartItems');
   const cartTotal = document.getElementById('cartTotal');
   const checkoutBtn = document.getElementById('checkoutBtn');
-  const clearCartBtn = document.getElementById('clearCartBtn');  // ADD THIS LINE
+  const clearCartBtn = document.getElementById('clearCartBtn');
   
   // Update cart count badge
   const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
@@ -171,3 +171,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
 });
+
+function clearCart() {
+  if (cart.length === 0) return;
+  
+  if (confirm('Are you sure you want to remove all items from your cart?')) {
+    cart = [];
+    updateCart();
+  }
+}
